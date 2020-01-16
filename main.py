@@ -32,8 +32,8 @@ send_message_element = "_3u328" # The area where you will typed the message to s
 
 # Saudation messages
 print("\t======== WHATSAPP SPAM ========")
-amount = int(input("How many messages do you want to send? "))
-
+amount_of_messages = int(input("How many messages do you want to send? "))
+contact_name = str(input("Send to which contact or group? Type as saved in WhatsApp "))
 # Open the browser (Firefox) and visit the site
 browser = webdriver.Firefox()
 browser.get('https://web.whatsapp.com/')
@@ -61,10 +61,10 @@ except NoSuchElementException:
     sys.exit()
 
 # Sending the messages
-for i in range(amount):
+for i in range(amount_of_messages):
     elem = browser.find_element_by_class_name(send_message_element)
     elem.send_keys(random.choice(msgList) + Keys.RETURN) # Choice a message in message list randomly
-    print("\tSend {} messages".format(totalcount)) # Print in terminal the amount of sended messages
+    print("\tSend {} messages".format(totalcount)) # Print in terminal the amount_of_messages of sended messages
     if count >= count_until_interval:
         count = 0
         print("Interval")
