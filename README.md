@@ -1,3 +1,7 @@
+## __Motivation__
+
+My niece asked me to create a way to send a lot of messages in WhatsApp to her friend in her birthday. So I made this script using _Python 3_ and _Selenium_ to automate this process and send more messages possible would be a manual way.
+
 ## __Requirements__
 * Python3
 * Pip3
